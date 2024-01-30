@@ -1,0 +1,79 @@
+.banner {
+    /*Usar a propriedade background pois se trata de um gradiente*/
+    background: var(--azul-degrade);
+    color: var(--branco);
+    /*text-align alinha todos os elementos em linha, não somente os textos*/
+    text-align: center;
+    padding: 2.5em 2em;
+}
+
+.banner__titulo {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.banner__texto {
+    font-weight: 500;
+    margin: 1em 0;
+}
+
+.banner__pesquisa {
+    background-color: transparent;
+    border: 1px solid var(--branco);
+    border-radius: 24px;
+    /*Fica branco quando escrevemos*/
+    color: var(--branco);
+    padding: 1em;
+    /*Largura do input ocupa 100% do espaço*/
+    width: 100%;
+}
+
+.banner__pesquisa::placeholder {
+    /*O placeholder não recebe os atributos colocados no body*/
+    font-family: var(--fonte-principal);
+    font-size: 14px;
+    font-weight: 400;
+    /*Cor "real" do input, que antes ficava cinza*/
+    color: var(--branco);
+    text-align: center;
+    background: url("../assets/Pesquisa.svg") no-repeat;
+    /*Aproximar a imagem da lupa em relação ao texto do input*/
+    background-position: 0.5em;
+}
+
+@media screen and (min-width: 1024px) {
+    .banner {
+        padding: 5em;
+    }
+
+    .banner__titulo {
+        font-size: 36px;
+    }
+
+    .banner__pesquisa {
+        width: 60%;
+        margin-top: 1em;
+        padding: 1em;
+    }
+
+    .banner__pesquisa::placeholder {
+        font-size: 16px;
+        background-position: 5em;
+    }
+}
+
+@media screen and (min-width: 1728px) {
+    .banner {
+        padding: 5em 0;
+    }
+    
+    .banner__pesquisa {
+        width: 37%;
+    }
+
+    .banner__pesquisa::placeholder {
+        background-position: 7em;
+    }
+}
+ 
+
